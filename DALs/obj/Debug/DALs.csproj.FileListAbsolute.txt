@@ -1,0 +1,9 @@
+E:\C#\QLBanSach_nhom5\DALs\bin\Debug\DALs.dll
+E:\C#\QLBanSach_nhom5\DALs\bin\Debug\DALs.pdb
+E:\C#\QLBanSach_nhom5\DALs\bin\Debug\DTOs.dll
+E:\C#\QLBanSach_nhom5\DALs\bin\Debug\DTOs.pdb
+E:\C#\QLBanSach_nhom5\DALs\obj\Debug\DALs.csprojAssemblyReference.cache
+E:\C#\QLBanSach_nhom5\DALs\obj\Debug\DALs.csproj.CoreCompileInputs.cache
+E:\C#\QLBanSach_nhom5\DALs\obj\Debug\DALs.csproj.CopyComplete
+E:\C#\QLBanSach_nhom5\DALs\obj\Debug\DALs.dll
+E:\C#\QLBanSach_nhom5\DALs\obj\Debug\DALs.pdb

@@ -1,0 +1,6 @@
+E:\C#\QLBanSach_nhom5\DTOs\bin\Debug\DTOs.dll
+E:\C#\QLBanSach_nhom5\DTOs\bin\Debug\DTOs.pdb
+E:\C#\QLBanSach_nhom5\DTOs\obj\Debug\DTOs.csproj.CoreCompileInputs.cache
+E:\C#\QLBanSach_nhom5\DTOs\obj\Debug\DTOs.dll
+E:\C#\QLBanSach_nhom5\DTOs\obj\Debug\DTOs.pdb
+E:\C#\QLBanSach_nhom5\DTOs\obj\Debug\DTOs.csprojAssemblyReference.cache

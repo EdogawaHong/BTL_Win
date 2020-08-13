@@ -1,0 +1,11 @@
+E:\C#\QLBanSach_nhom5\BULs\bin\Debug\BULs.dll
+E:\C#\QLBanSach_nhom5\BULs\bin\Debug\BULs.pdb
+E:\C#\QLBanSach_nhom5\BULs\bin\Debug\DALs.dll
+E:\C#\QLBanSach_nhom5\BULs\bin\Debug\DTOs.dll
+E:\C#\QLBanSach_nhom5\BULs\bin\Debug\DALs.pdb
+E:\C#\QLBanSach_nhom5\BULs\bin\Debug\DTOs.pdb
+E:\C#\QLBanSach_nhom5\BULs\obj\Debug\BULs.csprojAssemblyReference.cache
+E:\C#\QLBanSach_nhom5\BULs\obj\Debug\BULs.csproj.CoreCompileInputs.cache
+E:\C#\QLBanSach_nhom5\BULs\obj\Debug\BULs.csproj.CopyComplete
+E:\C#\QLBanSach_nhom5\BULs\obj\Debug\BULs.dll
+E:\C#\QLBanSach_nhom5\BULs\obj\Debug\BULs.pdb
