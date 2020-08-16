@@ -32,6 +32,7 @@ namespace QLBanSach_nhom5
             btnThemCT.Enabled = false;
             btnSuaCT.Enabled = false;
             btnXoaCT.Enabled = false;
+            dtNgayMua.Enabled = false;
             this.check = true;
         }
         public HoaDonForm(string mahd, string tennv, string manv)
@@ -152,6 +153,7 @@ namespace QLBanSach_nhom5
                     btnThemCT.Enabled = true;
                     btnSuaCT.Enabled = true;
                     btnXoaCT.Enabled = true;
+                    dtNgayMua.Enabled = true;
                 }
                 else
                 {

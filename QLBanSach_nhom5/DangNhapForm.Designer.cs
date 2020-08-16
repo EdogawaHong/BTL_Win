@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnDangKi = new System.Windows.Forms.Button();
+            this.txtMK = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -61,14 +61,6 @@
             this.txtMaNV.Size = new System.Drawing.Size(175, 20);
             this.txtMaNV.TabIndex = 2;
             // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.Location = new System.Drawing.Point(168, 101);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(175, 20);
-            this.txtMatKhau.TabIndex = 3;
-            // 
             // btnDangNhap
             // 
             this.btnDangNhap.Location = new System.Drawing.Point(268, 176);
@@ -89,14 +81,21 @@
             this.btnDangKi.UseVisualStyleBackColor = true;
             this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             // 
+            // txtMK
+            // 
+            this.txtMK.Location = new System.Drawing.Point(168, 101);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Size = new System.Drawing.Size(175, 20);
+            this.txtMK.TabIndex = 6;
+            // 
             // DangNhapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 341);
+            this.Controls.Add(this.txtMK);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -113,8 +112,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaNV;
-        private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnDangKi;
+        private System.Windows.Forms.TextBox txtMK;
     }
 }

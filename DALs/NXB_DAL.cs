@@ -14,32 +14,32 @@ namespace DALs
         public DataTable GetTable_NXB()
         {
             DataTable dt;
-            string sql = "select * from NHAXUATBAN";
+            string sql = "select * from NHA_XUAT_BAN";
             dt = XuLy.CreateTable(sql);
             return dt;
         }
         public bool Them_NXB(NXB nxb)
         {
-            string sql = "insert into NHAXUATBAN(MaNXB,TenNXB,DiaChi,Sdt) values('" + nxb.manxb + "', N'" + nxb.tennxb + "', N'" + nxb.diachi + "', '" + nxb.sdt + "')";
+            string sql = "insert into NHA_XUAT_BAN(TenNXB,DiaChi,Sdt) values(N'" + nxb.tennxb + "', N'" + nxb.diachi + "', '" + nxb.sdt + "')";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public bool Sua_NXB(NXB nxb)
         {
-            string sql = "update NHAXUATBAN set TenNXB=N'"+nxb.tennxb+ "',DiaChi=N'" + nxb.diachi + "',Sdt='" + nxb.sdt + "' where MaNXB='" + nxb.manxb + "'";
+            string sql = "update NHA_XUA_TBAN set TenNXB=N'"+nxb.tennxb+ "',DiaChi=N'" + nxb.diachi + "',Sdt='" + nxb.sdt + "' where MaNXB='" + nxb.manxb + "'";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public bool Xoa_NXB(string ma)
         {
-            string sql = "delete from NHAXUATBAN where MaNXB='" + ma + "'";
+            string sql = "delete from NHA_XUAT_BAN where MaNXB='" + ma + "'";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public DataTable TimKiem_NXB(string ma)
         {
             DataTable dt;
-            string sql = "select * from NHAXUATBAN where MaNXB='" + ma + "'";
+            string sql = "select * from NHA_XUAT_BAN where MaNXB='" + ma + "'";
             dt = XuLy.CreateTable(sql);
             return dt;
         }

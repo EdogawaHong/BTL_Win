@@ -14,25 +14,25 @@ namespace DALs
         public DataTable GetTable_HD()
         {
             DataTable dt;
-            string sql = "select MaHD,TenNV,TenKH,NgayMua from HOADON inner join NHANVIEN on HOADON.MaNV=NHANVIEN.MaNV inner join KHACHHANG on HOADON.MaKH=KHACHHANG.MaKH";
+            string sql = "select MaHD,TenNV,TenKH,NgayMua from HOA_DON inner join NHAN_VIEN on HOA_DON.MaNV=NHAN_VIEN.MaNV inner join KHACH_HANG on HOA_DON.MaKH=KHACH_HANG.MaKH";
             dt = XuLy.CreateTable(sql);
             return dt;
         }
         public bool Them_HD(HoaDon hd)
         {
-            string sql = "insert into HOADON(MaHD,MaNV,MaKH,NgayMua) values('" + hd.mahd + "', '" + hd.manv + "', '" + hd.makh + "', '" + hd.ngaymua + "')";
+            string sql = "insert into HOA_DON(MaNV,MaKH,NgayMua) values('" + hd.manv + "', '" + hd.makh + "', '" + hd.ngaymua + "')";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public bool Sua_HD(HoaDon hd)
         {
-            string sql = "update HOADON set MaNV='" + hd.manv + "',MaKH='" + hd.makh + "',NgayMua='" + hd.ngaymua + "' where MaHD='" + hd.mahd + "'";
+            string sql = "update HOA_DON set MaNV='" + hd.manv + "',MaKH='" + hd.makh + "',NgayMua='" + hd.ngaymua + "' where MaHD='" + hd.mahd + "'";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public bool Xoa_HD(string ma)
         {
-            string sql = "delete from HOADON where MaHD='" + ma + "'";
+            string sql = "delete from HOA_DON where MaHD='" + ma + "'";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
@@ -97,7 +97,7 @@ namespace DALs
         public HoaDon_TimKiem TimKiem_MaHD(string ma)
         {
             DataTable dt;
-            string sql = "select MaHD,TenNV,TenKH,NgayMua from HOADON inner join NHANVIEN on HOADON.MaNV=NHANVIEN.MaNV inner join KHACHHANG on HOADON.MaKH=KHACHHANG.MaKH where MaHD='" + ma + "'";
+            string sql = "select MaHD,TenNV,TenKH,NgayMua from HOA_DON inner join NHAN_VIEN on HOA_DON.MaNV=NHAN_VIEN.MaNV inner join KHACHHANG on HOADON.MaKH=KHACH_HANG.MaKH where MaHD='" + ma + "'";
             dt = XuLy.CreateTable(sql);
             HoaDon_TimKiem hd = new HoaDon_TimKiem();
             foreach (var row in dt.AsEnumerable())

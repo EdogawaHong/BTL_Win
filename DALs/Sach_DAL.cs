@@ -13,13 +13,13 @@ namespace DALs
         public DataTable GetTable_Sach()
         {
             DataTable dt;
-            string sql = "select MaSach,TenSach,TacGia,DonGia,TenTL,TenNXB from SACH inner join THELOAI on SACH.MaTL=THELOAI.MaTL inner join NHAXUATBAN on SACH.MaNXB=NHAXUATBAN.MaNXB";
+            string sql = "select MaSach,TenSach,TacGia,DonGia,TenTL,TenNXB from SACH inner join THE_LOAI on SACH.MaTL=THE_LOAI.MaTL inner join NHA_XUAT_BAN on SACH.MaNXB=NHA_XUAT_BAN.MaNXB";
             dt = XuLy.CreateTable(sql);
             return dt;
         }
         public bool Them_Sach(Sach s)
         {
-            string sql = "insert into SACH(MaSach,TenSach,TacGia,DonGia,MaTL,MaNXB) values('" + s.masach + "', N'" + s.tensach + "', N'" + s.tacgia + "', '" + s.dongia + "', '" + s.matl + "', '" + s.manxb+ "')";
+            string sql = "insert into SACH(TenSach,TacGia,DonGia,SoLuongCon,MaTL,MaNXB) values(N'" + s.tensach + "', N'" + s.tacgia + "', '" + s.dongia + "','" + 0 + "', '" + s.matl + "', '" + s.manxb+ "')";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }

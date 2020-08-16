@@ -30,24 +30,41 @@ namespace QLBanSach_nhom5
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            bool check = false;
             if (Check_Null_DN())
             {
                 foreach (NhanVien nv in listNV)
                 {
-                    if (nv.manv.Equals(txtMaNV.Text) && nv.matkhau.Equals(txtMatKhau.Text))
+                    /* if (txtMaNV.Text.Equals(nv.sdt) )
+                     {
+                         MessageBox.Show(nv.sdt);
+                     }*/
+                    MessageBox.Show(nv.matkhau);
+
+                    if (txtMaNV.Text.Equals(nv.sdt) &&txtMK.Text.Equals(nv.matkhau))
                     {
-                        this.Hide();
-                        QuanLyForm form1 = new QuanLyForm(nv.manv,nv.tennv);
-                        form1.ShowDialog();
-                        this.Close();
+                        MessageBox.Show("thanh cong");
                     }
+
+                    /*if (nv.sdt.Equals(txtMaNV.Text) && nv.matkhau.Equals(txtMatKhau.Text))*/
+                    /*if (txtMaNV.Text == listNV[0].sdt && txtMatKhau.Text == listNV[0].matkhau)
+                    {
+                        MessageBox.Show("hihi");
+                        *//*this.Hide();
+                        QuanLyForm form1 = new QuanLyForm(nv.manv, nv.tennv);
+                        form1.ShowDialog();
+                        this.Close();*//*
+                        check = true;
+                    }*/
+
                 }
-                MessageBox.Show("Vui lòng kiểm tra lại tài khoản!", "Thông báo");
+                if(check == false)
+                    MessageBox.Show("Vui lòng kiểm tra lại tài khoản!", "Thông báo");
             }
         }
         private bool Check_Null_DN()
         {
-            if (string.IsNullOrEmpty(txtMaNV.Text) || string.IsNullOrEmpty(txtMatKhau.Text))
+            if (string.IsNullOrEmpty(txtMaNV.Text) || string.IsNullOrEmpty(txtMK.Text))
             {
                 MessageBox.Show("Bạn chưa nhập đủ thông tin để đăng nhập!", "Thông báo");
                 return false;
@@ -58,7 +75,7 @@ namespace QLBanSach_nhom5
         private void DangNhapForm_Load(object sender, EventArgs e)
         {
             txtMaNV.Text = Ma;
-            txtMatKhau.Text = MK;
+            txtMK.Text = MK;
 
             listNV = nhanVien_BUL.GetList_NV();
         }

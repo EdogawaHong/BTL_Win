@@ -17,7 +17,7 @@ namespace DALs
             {
                 List<NhanVien> listNV = new List<NhanVien>();
                 DataTable dt;
-                string sql = "select * from NHANVIEN";
+                string sql = "select * from NHAN_VIEN";
                 dt = XuLy.CreateTable(sql);
 
                 foreach (var row in dt.AsEnumerable())
@@ -49,7 +49,7 @@ namespace DALs
 
         public bool Them_NV(NhanVien nv)
         {
-            string sql = "insert into NHANVIEN(MaNV,TenNV,DiaChi,Sdt,MatKhau) values('" + nv.manv + "', N'" + nv.tennv+ "', N'" + nv.diachi + "', '" + nv.sdt + "', '" + nv.matkhau + "')";
+            string sql = "insert into NHAN_VIEN(TenNV,DiaChi,Sdt,MatKhau) values( N'" + nv.tennv+ "', N'" + nv.diachi + "', '" + nv.sdt + "', '" + nv.matkhau + "')";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }

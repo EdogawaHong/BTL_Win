@@ -14,32 +14,32 @@ namespace DALs
         public DataTable GetTable_KH()
         {
             DataTable dt;
-            string sql = "select * from KHACHHANG";
+            string sql = "select * from KHACH_HANG";
             dt = XuLy.CreateTable(sql);
             return dt;
         }
         public bool Them_KH(KhachHang kh)
         {
-            string sql = "insert into KHACHHANG(MaKH,TenKH,DiaChi,Sdt) values('" + kh.makh + "', N'" + kh.tenkh + "', N'" + kh.diachi + "', '" + kh.sdt + "')";
+            string sql = "insert into KHACH_HANG(TenKH,DiaChi,Sdt) values(N'" + kh.tenkh + "', N'" + kh.diachi + "', '" + kh.sdt + "')";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public bool Sua_KH(KhachHang kh)
         {
-            string sql = "update KHACHHANG set TenKH=N'" + kh.tenkh + "',DiaChi=N'" + kh.diachi + "',Sdt='" + kh.sdt + "' where MaKH='" + kh.makh + "'";
+            string sql = "update KHACH_HANG set TenKH=N'" + kh.tenkh + "',DiaChi=N'" + kh.diachi + "',Sdt='" + kh.sdt + "' where MaKH='" + kh.makh + "'";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public bool Xoa_KH(string ma)
         {
-            string sql = "delete from KHACHHANG where MaKH='" + ma + "'";
+            string sql = "delete from KHACH_HANG where MaKH='" + ma + "'";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public DataTable TimKiem_KH(string ma)
         {
             DataTable dt;
-            string sql = "select * from KHACHHANG where MaKH='" + ma + "'";
+            string sql = "select * from KHACH_HANG where MaKH='" + ma + "'";
             dt = XuLy.CreateTable(sql);
             return dt;
         }

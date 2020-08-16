@@ -36,17 +36,16 @@
             this.lbTenNV = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.grvChiTietHD = new System.Windows.Forms.DataGridView();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.lbTenKH = new System.Windows.Forms.Label();
             this.lbNgayMua = new System.Windows.Forms.Label();
-            this.btnSua = new System.Windows.Forms.Button();
             this.btnXem = new System.Windows.Forms.Button();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grvChiTietHD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +125,30 @@
             this.grvChiTietHD.Size = new System.Drawing.Size(546, 150);
             this.grvChiTietHD.TabIndex = 9;
             // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.Name = "TenSach";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
             // btnQuayLai
             // 
             this.btnQuayLai.Location = new System.Drawing.Point(495, 359);
@@ -172,19 +195,9 @@
             this.lbNgayMua.TabIndex = 14;
             this.lbNgayMua.Text = "01/01/1999";
             // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(385, 359);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 15;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // btnXem
             // 
-            this.btnXem.Location = new System.Drawing.Point(257, 359);
+            this.btnXem.Location = new System.Drawing.Point(373, 359);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(93, 23);
             this.btnXem.TabIndex = 16;
@@ -192,37 +205,12 @@
             this.btnXem.UseVisualStyleBackColor = true;
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "TenSach";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.Name = "TenSach";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
             // ChiTietHoaDonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 450);
             this.Controls.Add(this.btnXem);
-            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.lbNgayMua);
             this.Controls.Add(this.lbTenKH);
             this.Controls.Add(this.lbTongTien);
@@ -260,7 +248,6 @@
         private System.Windows.Forms.Label lbTongTien;
         private System.Windows.Forms.Label lbTenKH;
         private System.Windows.Forms.Label lbNgayMua;
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;

@@ -13,25 +13,25 @@ namespace DALs
         public DataTable GetTable_CT(string ma)
         {
             DataTable dt;
-            string sql = "select TenSach,SoLuong,DonGia,SUM(SoLuong*DonGia) as 'ThanhTien' from CHITIETHOADON inner join SACH on CHITIETHOADON.MaSach=SACH.MaSach where MaHD='" + ma + "' group by TenSach,SoLuong,DonGia";
+            string sql = "select TenSach,SoLuong,DonGia,SUM(SoLuong*DonGia) as 'ThanhTien' from CHI_TIET_HOA_DON inner join SACH on CHI_TIET_HOA_DON.MaSach=SACH.MaSach where MaHD='" + ma + "' group by TenSach,SoLuong,DonGia";
             dt = XuLy.CreateTable(sql);
             return dt;
         }
         public bool Them_CT(ChiTietHD ct)
         {
-            string sql = "insert into CHITIETHOADON(SoLuong,MaSach,MaHD) values('" + ct.soluong + "', '" + ct.masach + "', '" + ct.mahd + "')";
+            string sql = "insert into CHI_TIET_HOA_DON(SoLuong,MaSach,MaHD) values('" + ct.soluong + "', '" + ct.masach + "', '" + ct.mahd + "')";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public bool Sua_CT(ChiTietHD ct)
         {
-            string sql = "update CHITIETHOADON set SoLuong='" + ct.soluong + "' where MaSach='" + ct.masach + "' and MaHD='" + ct.mahd + "'";
+            string sql = "update CHI_TIET_HOA_DON set SoLuong='" + ct.soluong + "' where MaSach='" + ct.masach + "' and MaHD='" + ct.mahd + "'";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
         public bool Xoa_CT(string masach, string mahd)
         {
-            string sql = "delete from CHITIETHOADON where MaSach='" + masach + "' and MaHD='" + mahd + "'";
+            string sql = "delete from CHI_TIET_HOA_DON where MaSach='" + masach + "' and MaHD='" + mahd + "'";
             if (XuLy.ExecuteNonQuery(sql) > 0) return true;
             else return false;
         }
@@ -46,7 +46,7 @@ namespace DALs
             try
             {
                 DataTable dt;
-                string sql = "select SUM(SoLuong*DonGia) as 'TongTien' from CHITIETHOADON inner join SACH on CHITIETHOADON.MaSach=SACH.MaSach where MaHD='" + ma + "'";
+                string sql = "select SUM(SoLuong*DonGia) as 'TongTien' from CHI_TIET_HOA_DON inner join SACH on CHI_TIET_HOA_DON.MaSach=SACH.MaSach where MaHD='" + ma + "'";
                 dt = XuLy.CreateTable(sql);
                 DataRow dr = dt.Rows[0];
                 int sum = Convert.ToInt32(dr["TongTien"].ToString());

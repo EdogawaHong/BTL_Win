@@ -41,14 +41,6 @@ namespace QLBanSach_nhom5
             ThongTinHoaDon(txtMaHD.Text);
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            HoaDonForm cthoaDonForm = new HoaDonForm(txtMaHD.Text, this.TenNV, this.MaNV);
-            cthoaDonForm.ShowDialog();
-            this.Close();
-        }
-
         private void ThongTinHoaDon(string mahd)
         {
             if (string.IsNullOrEmpty(mahd))

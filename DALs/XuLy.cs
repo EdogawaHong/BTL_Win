@@ -14,7 +14,7 @@ namespace DALs
         public static SqlCommand cmd;
         public static DataTable dt;
         public static SqlDataAdapter da;
-        public static string strConnection = @"Data Source=DESKTOP-0GHR3KF\SQLEXPRESS;Initial Catalog=QLBanSach;Integrated Security=True";
+        public static string strConnection = @"Data Source=DESKTOP-0GHR3KF\SQLEXPRESS;Initial Catalog=QLBS;Integrated Security=True";
 
         public static DataTable CreateTable(String sql)
         {

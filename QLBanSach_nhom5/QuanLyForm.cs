@@ -23,7 +23,7 @@ namespace QLBanSach_nhom5
         BaoCao_BUL baoCao_BUL = new BaoCao_BUL();
 
         private string TenNV, MaNV;
-        public QuanLyForm(string manv,string tennv)
+        public QuanLyForm(string manv, string tennv)
         {
             InitializeComponent();
             Load_Data();
@@ -230,7 +230,7 @@ namespace QLBanSach_nhom5
                 {
                     MessageBox.Show("Không thể thêm mới thể loại này!", "Thông báo");
                 }
-            } 
+            }
         }
 
         private void btnSuaTL_Click(object sender, EventArgs e)
@@ -500,7 +500,7 @@ namespace QLBanSach_nhom5
                 {
                     int dg = int.Parse(txtDonGiaS.Text);
                     Sach s = new Sach(ma, ten, tg, dg, matl, manxb);
-                    
+
                     if (sach_BUL.Sua_Sach(s))
                     {
                         Load_Data();
@@ -579,8 +579,8 @@ namespace QLBanSach_nhom5
             txtTenS.Text = grvDanhSachS.Rows[i].Cells[1].Value.ToString();
             txtTacGiaS.Text = grvDanhSachS.Rows[i].Cells[2].Value.ToString();
             txtDonGiaS.Text = grvDanhSachS.Rows[i].Cells[3].Value.ToString();
-            cbTheLoai.Text= grvDanhSachS.Rows[i].Cells[4].Value.ToString();
-            cbNXB.Text= grvDanhSachS.Rows[i].Cells[5].Value.ToString();
+            cbTheLoai.Text = grvDanhSachS.Rows[i].Cells[4].Value.ToString();
+            cbNXB.Text = grvDanhSachS.Rows[i].Cells[5].Value.ToString();
         }
         private bool Check_Null_Sach()
         {
@@ -601,24 +601,9 @@ namespace QLBanSach_nhom5
         private void btnThemHD_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HoaDonForm hoaDonForm = new HoaDonForm(this.TenNV,this.MaNV);
+            HoaDonForm hoaDonForm = new HoaDonForm(this.TenNV, this.MaNV);
             hoaDonForm.ShowDialog();
             this.Close();
-        }
-
-        private void btnSuaHD_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtMaHD.Text))
-            {
-                MessageBox.Show("Bạn chưa chọn hóa đơn để sửa!", "Thông báo");
-            }
-            else
-            {
-                this.Hide();
-                HoaDonForm hoaDonForm = new HoaDonForm(txtMaHD.Text, this.TenNV, this.MaNV);
-                hoaDonForm.ShowDialog();
-                this.Close();
-            }
         }
 
         private void btnXoaHD_Click(object sender, EventArgs e)
@@ -663,7 +648,7 @@ namespace QLBanSach_nhom5
             {
                 int i = cbTK_HD.SelectedIndex;
                 List<HoaDon_TimKiem> listHD = hoaDon_BUL.TimKiem_HD(txtTimKiemHD.Text, i);
-                if (listHD.Count==0)
+                if (listHD.Count == 0)
                 {
                     MessageBox.Show("Không tìm thấy hóa đơn phù hợp!", "Thông báo");
                 }
@@ -704,6 +689,7 @@ namespace QLBanSach_nhom5
                 ChiTietHoaDonForm hoaDonForm = new ChiTietHoaDonForm(txtMaHD.Text, this.TenNV, this.MaNV);
                 hoaDonForm.ShowDialog();
                 this.Close();
+
             }
         }
 

@@ -25,6 +25,7 @@ namespace DTOs
             this.diachi = diachi;
             this.sdt = sdt;
             this.matkhau = matkhau;
+
         }
     }
 }
